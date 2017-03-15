@@ -144,6 +144,7 @@ static void *ptr_deal_ID(void *p)
 	if(0 != single(id))
 	{
 		puts("single() error");
+		pthread_exit(NULL);
 	}
 	sprintf(id, "%s", ID);
 	printf("\nsingle 之后: %s\n", id);

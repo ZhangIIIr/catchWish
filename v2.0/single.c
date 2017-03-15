@@ -22,7 +22,7 @@ int single(char *id)
 	if(0 != getTDK(id))
 	{
 		puts("getTDK error!");
-		exit(0);
+		return -1;
 	}
 
 //提取出图片地址和图片数量并保存到文件
@@ -32,7 +32,7 @@ int single(char *id)
 	if(0 != disposeUrl(id))
 	{
 		printf("\ndisposeUrl error!\n");
-		exit(0);
+		return -1;
 	}
 	
 
@@ -41,7 +41,7 @@ int single(char *id)
 	if(0 != sizeColor(id))
 	{
 		printf("\nget size|color error!\n");
-		exit(0);
+		return -1;
 	}
 	
 
@@ -61,7 +61,7 @@ int single(char *id)
 	if(0 != price(id))
 	{
 		printf("\nmain: price error!\n");
-		exit(0);
+		return -1;
 	}
 
 //依次写入 颜色 * 尺码 行
@@ -69,7 +69,7 @@ int single(char *id)
 	if(0 != writeRest(id))
 	{
 		printf("\nwriteRest error!\n");
-		exit(0);
+		return -1;
 	}
 
 #if 0
