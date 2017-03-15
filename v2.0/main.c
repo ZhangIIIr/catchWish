@@ -135,6 +135,7 @@ static void *ptr_deal_ID(void *p)
 	if(0 != system(wgetWeb))
 	{
 		puts("下载网页失败");
+		pthread_exit(NULL);
 	}
 	sprintf(id, "%s", ID);
 
