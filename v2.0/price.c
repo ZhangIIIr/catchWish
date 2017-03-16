@@ -113,15 +113,6 @@ int price(char *id)
 	}
 	printf("MSRP写入完毕\n");
 
-#if 0		//这一段是重定义msrp的
-	int price;
-	int msrp;
-	fseek(pPrice, 0, SEEK_SET);
-	fseek(pMSRP, 0, SEEK_SET);
-	fscanf(pPrice, "%d", price);
-	fscanf(pMSRP, "%d", msrp);
-	if()
-#endif
 
 	printf("\n\n");
 

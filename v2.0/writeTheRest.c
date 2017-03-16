@@ -1,34 +1,6 @@
 #include "catchWish.h"
 
 
-#if 0									//这三个函数可能有bug
-int whetherEmpty(void *fp)
-{
-	fseek(fp, 0, SEEK_END);
-	if(0 == ftell(fp))
-		return 1;
-	else
-	{
-		fseek(fp, 0, SEEK_SET);
-		return 0;
-	}
-}
-
-int lineLenth(void * fp, char *s)
-{
-	int i = 0;
-	if(1 == whetherEmpty(fp))
-	{
-		return 0;
-	}
-	else
-	{
-		for(; s[i] != '\n'; i++)	
-		return i;
-	}
-}
-#endif
-
 int lineNum(void *fp)
 {
 	int i = 0;

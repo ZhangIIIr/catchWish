@@ -65,25 +65,11 @@ int disposeUrl(char *id)
 		perror("fopen urls_1");
 		return -1;
 	}
+
 	i = 0;
-#if 0
-	while(fread(&c, 1, 1, pUrls))						//这样写为啥会死循环？？？！！！
-	{
-		if(c == '\n')
-		{
-			fwrite("\n", 1, 1, pUrls_1);
-			while(c != 'h')
-			{
-				fread(&c, 1, 1, pUrls);
-				printf("%d	%c\n", i, c);
-			}
-		}
-		fwrite(&c, 1, 1, pUrls_1);
-	}
-#else
 	while(fread(&c, 1, 1, pUrls))
 	{
-		if(c == '\n')									//这个if为什么会多进入一次???!!!
+		if(c == '\n')
 		{	
 			fwrite("\n", 1, 1, pUrls_1);
 			while(fread(&c, 1, 1, pUrls))
@@ -96,7 +82,6 @@ int disposeUrl(char *id)
 		}
 		fwrite(&c, 1, 1, pUrls_1);
 	}
-#endif
 
 
 

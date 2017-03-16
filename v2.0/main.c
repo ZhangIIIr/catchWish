@@ -79,7 +79,6 @@ int main(void)
 
 	for(i = 0; i < THREAD_NUMMBER; i++)
 	{
-		//pthread_join(tid[i], (void **)fp_IDs);
 		pthread_join(tid[i], NULL);
 	}
 
@@ -112,7 +111,7 @@ static void *ptr_deal_ID(void *p)
 		fread(&c1, 1, 1, p);
 		if((c1 == '\n' || c1 == '\0' || c1 == '\r') && c1 != EOF)
 		{
-			fseek(p, SEEK_CUR, 1);							//此处大妙，坑了我半个白天时间，没这句的话就只有一半的线程可以得到ID
+			fseek(p, SEEK_CUR, 1);							//此处大妙，没这句的话就只有一半的线程可以得到ID
 			break;
 		}
 		sprintf(&ID[j++], "%c", c1);
@@ -150,6 +149,7 @@ static void *ptr_deal_ID(void *p)
 	printf("\nsingle 之后: %s\n", id);
 
 	
+	//调试代码
 	//printf("%s %d %s: fopen id.haha failed\n", __FILE__, __LINE__, __func__);
 
 
