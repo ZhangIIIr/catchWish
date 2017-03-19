@@ -1,6 +1,5 @@
 #include "catchWish.h"
 
-
 int getTDK(char *id)
 {
 	printf("getTDK() begin");

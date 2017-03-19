@@ -1,1 +1,1 @@
-gcc main.c single.c mkdir.c downWeb.c size-color.c picture.c top.c writeTheRest.c cp2win.c price.c search.c getTDK.c -o catchWish -pthread -Wall -g
+gcc main.c single.c mkdir.c downWeb.c size-color.c picture.c writeTop.c writeTheRest.c cp2win.c price.c search.c getTDK.c -o catchWish -pthread -Wall -g

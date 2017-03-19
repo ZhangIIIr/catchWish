@@ -1,6 +1,4 @@
 #include "catchWish.h"
-#include <pthread.h>
-#include <unistd.h>
 
 
 #define THREAD_NUMMBER		13
@@ -139,14 +137,12 @@ static void *ptr_deal_ID(void *p)
 	sprintf(id, "%s", ID);
 
 
-	printf("\nsingle 之前: %s\n", id);
 	if(0 != single(id))
 	{
 		puts("single() error");
 		pthread_exit(NULL);
 	}
 	sprintf(id, "%s", ID);
-	printf("\nsingle 之后: %s\n", id);
 
 	
 	//调试代码

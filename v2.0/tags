@@ -4,28 +4,30 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+CC	makefile	/^CC=gcc$/;"	m
+OBJS	makefile	/^OBJS=main.o single.o downWeb.o getTDK.o price.o size-color.o fetchSKU.o writeTheRest.o cp2win.o mkdir.o search.o dir_id.o picture.o top.o$/;"	m
 THREAD_NUMMBER	main.c	6;"	d	file:
 WORK_DERECTORY	main.c	7;"	d	file:
 _SOGAR_H_	catchWish.h	2;"	d
-cat	main.c	/^void cat(char *a, char *b)$/;"	f
+cat	main.c	/^int cat(char *a, char *b)$/;"	f
 cp2win	cp2win.c	/^int cp2win(char *v)$/;"	f
-disposeUrl	picture.c	/^int disposeUrl()$/;"	f
-downWeb	downWeb.c	/^int downWeb(char *id)$/;"	f
+disposeUrl	picture.c	/^int disposeUrl(char *id)$/;"	f
+downWeb	downWeb.c	/^void downWeb(char *id)$/;"	f
 frounding	writeTheRest.c	/^int frounding(int n)$/;"	f
-getTDK	downWeb.c	/^int getTDK()$/;"	f
+getTDK	getTDK.c	/^int getTDK(char *id)$/;"	f
 lineNum	writeTheRest.c	/^int lineNum(void *fp)$/;"	f
 main	main.c	/^int main(void)$/;"	f
-mkdir	mkdir.c	/^void mkdir(char *s)$/;"	f
+mkdir	mkdir.c	/^int mkdir(char *s)$/;"	f
 mut1	main.c	/^static pthread_mutex_t mut1 = PTHREAD_MUTEX_INITIALIZER;$/;"	v	file:
 mut2	main.c	/^static pthread_mutex_t mut2 = PTHREAD_MUTEX_INITIALIZER;$/;"	v	file:
-price	price.c	/^int price(void)$/;"	f
+price	price.c	/^int price(char *id)$/;"	f
 ptr_deal_ID	main.c	/^static void *ptr_deal_ID(void *p)$/;"	f	file:
 rm_work_dir	main.c	/^int rm_work_dir()$/;"	f
 rounding	writeTheRest.c	/^int rounding(int n)$/;"	f
-sMulC	writeTheRest.c	/^int sMulC(int PSKU)$/;"	f
-search	downWeb.c	/^int search(void *fp, char *s)$/;"	f
+sMulC	writeTheRest.c	/^int sMulC(int PSKU, char *id)$/;"	f
+search	search.c	/^int search(void *fp, char *s)$/;"	f
 single	single.c	/^int single(char *id)$/;"	f
-sizeColor	size-color.c	/^int sizeColor()$/;"	f
-sku	fetchSKU.c	/^int sku()$/;"	f
-writeRest	writeTheRest.c	/^int writeRest()$/;"	f
+sizeColor	size-color.c	/^int sizeColor(char *id)$/;"	f
+sku	fetchSKU.c	/^int sku(char *id)$/;"	f
+writeRest	writeTheRest.c	/^int writeRest(char *id)$/;"	f
 writeTop	top.c	/^int writeTop()$/;"	f

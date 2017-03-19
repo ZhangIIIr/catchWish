@@ -3,8 +3,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include <errno.h>
 #include <time.h>
+
+#include <pthread.h>
 
 
 int single(char *id);
@@ -20,8 +23,6 @@ int writeTop(void);
 int writeRest(char *id);
 int cp2win(char *v);
 int price(char *id);
-
-//char dir_id(char *id, char *s);
 
 
 

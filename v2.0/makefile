@@ -1,13 +1,13 @@
-#CFLAGS+=-pthread
-#CFLAGS+=-Wall
-#LDFLAGS+=-pthread
+OBJS=main.o single.o downWeb.o getTDK.o price.o size-color.o fetchSKU.o writeTheRest.o cp2win.o mkdir.o search.o picture.o writeTop.o
+CC=gcc
+CFLAGS+=-Wall -c -g
+CFLAGS_+=-Wall -g
+LDFLAGS+=-pthread
 
-
-Target: main.o single.o mkdir.o downWeb.o size-color.o picture.o top.o writeTheRest.o cp2win.o price.o search.o getTDK.o
-	gcc main.o single.o mkdir.o downWeb.o size-color.o picture.o top.o writeTheRest.o cp2win.o price.o search.o getTDK.o -o haha -pthread -Wall
-
-#Target: main.o single.o mkdir.o downWeb.o size-color.o picture.o top.o writeTheRest.o cp2win.o price.o search.o
-#	gcc main.o single.o mkdir.o downWeb.o size-color.o picture.o top.o writeTheRest.o cp2win.o price.o search.o -o haha -pthread -Wall
+catchWish:$(OBJS)
+	$(CC) $^ -o $@ $(CFLAGS_) $(LDFLAGS)
+%.o:%.c
+	$(CC) $^ -o $@ $(CFLAGS) $(LDFLAGS)
 
 clean:
-	rm -f *.o haha
+	$(RM) *.o catchWish -r
